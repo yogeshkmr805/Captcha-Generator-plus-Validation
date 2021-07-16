@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Captcha Generator</title>
+        <style>
+
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: 'Signika Negative', sans-serif;
+            }
+            #specify,
+            #gen,
+            #show {
+                margin-left: 30%;
+                margin-top: 20px;
+
+            }
+
+            #specify {
+                background-image: linear-gradient(45deg , rgb(48, 129, 235),rgb(140, 236, 243));
+                margin-right: 35%;
+                padding: 2%;
+                border: 2px solid black;
+                border-radius: 20px;
+                color: azure;
+            }
+            #gen {
+                height: 40px;
+                width: 170px;
+                font-size: large;
+                background-color: rgb(69, 93, 233);
+                border: 1px solid black;;
+                border-radius: 5px;
+                color: bisque;
+                margin-left: 42%;
+            }
+            #inpt{
+                /* margin-left: 43%; */
+                margin: 30px 42%;
+                height: 40px;
+                width: 170px;
+                font-size: large;
+                font-family: 'Signika Negative', sans-serif ;
+                text-align: center;
+                border: 2px solid black;
+                border-radius: 5px;
+            }
+            #ref,#spec,#show{
+                height: 40px;
+                width: 170px;
+                margin-left: 42%;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <section id="specify">
+            <div id="spec">
+                
+            </div><br>
+            <div id="ref">
+                <button id="refresh" onclick="location.reload()">Refresh</button>
+            </div>
+        </section>  
+        <section>  
+            <label for="inpt"><input type="text" name="inpt" id="inpt" placeholder="Enter Captcha"></label><br>
+            <button id="gen" onclick="valid()">Validate Captcha</button>
+            <div id="show">
+
+            </div>
+        </section>
+    </body>
+    <script src="captcha.js"></script>
+</html>
